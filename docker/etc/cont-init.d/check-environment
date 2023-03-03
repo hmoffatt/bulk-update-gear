@@ -1,0 +1,8 @@
+#!/command/with-contenv sh
+if [ -z "$STRAVA_CLIENT_ID" -o -z "$STRAVA_CLIENT_SECRET" ]; then
+	echo
+	echo "*** STRAVA_CLIENT_ID or STRAVA_CLIENT_SECRET environment variable not set **"
+	echo
+	false
+fi
+

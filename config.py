@@ -5,7 +5,7 @@ APP_SECRET = os.environ['APP_SECRET_KEY']
 if os.environ['FLASK_ENV'] == 'development':
     client_id = int(os.environ['STRAVA_CLIENT_ID'])
     client_secret = os.environ['STRAVA_CLIENT_SECRET']
-    url = 'http://localhost:5000/'
+    url = os.environ.get('URL', 'http://localhost:5000/')
     CELERY_BROKER_URL = 'redis://localhost:6379/0'
     CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
